@@ -1,6 +1,7 @@
 #pragma once
 #include "Figure.h"
 #include "FigArr.h"
+#include "Triangle.h"
 //#include "myStorage.h"
 FigureArr farr;
 namespace CppCLRWinFormsProject {
@@ -350,7 +351,15 @@ namespace CppCLRWinFormsProject {
 		Graphics^ h = CreateGraphics();
 		//h->Clear(BackColor);
 		try {
-
+			int xcor = System::Convert::ToInt32(xCorBox->Text);
+			int ycor = System::Convert::ToInt32(yCorBox->Text);
+			int side = System::Convert::ToInt32(sideLengthBox->Text);
+			int heightScreen = this->Height;
+			int widthScreen = this->Width;
+			if (triaRadio->Checked) {
+				Triangle* tria = new Triangle(xcor, ycor, side, widthScreen, heightScreen);
+				tria->show(h, outColorBtn->BackColor, backColorBtn->BackColor);
+			}
 		}
 		catch (Figure::Exception ex) {
 			messageBox->Visible = true;
