@@ -1,5 +1,6 @@
 #pragma once
 #include "Figure.h"
+#include "Circle.h"
 #include "FigArr.h"
 //#include "myStorage.h"
 FigureArr farr;
@@ -122,36 +123,37 @@ namespace CppCLRWinFormsProject {
 			// xCorLabel
 			// 
 			this->xCorLabel->AutoSize = true;
-			this->xCorLabel->Location = System::Drawing::Point(12, 282);
+			this->xCorLabel->Location = System::Drawing::Point(11, 226);
 			this->xCorLabel->Name = L"xCorLabel";
-			this->xCorLabel->Size = System::Drawing::Size(135, 20);
+			this->xCorLabel->Size = System::Drawing::Size(114, 16);
 			this->xCorLabel->TabIndex = 0;
 			this->xCorLabel->Text = L"Координата по x";
 			// 
 			// yCorLabel
 			// 
 			this->yCorLabel->AutoSize = true;
-			this->yCorLabel->Location = System::Drawing::Point(12, 313);
+			this->yCorLabel->Location = System::Drawing::Point(11, 250);
 			this->yCorLabel->Name = L"yCorLabel";
-			this->yCorLabel->Size = System::Drawing::Size(135, 20);
+			this->yCorLabel->Size = System::Drawing::Size(115, 16);
 			this->yCorLabel->TabIndex = 1;
 			this->yCorLabel->Text = L"Координата по y";
 			// 
 			// sideLengthLabel
 			// 
 			this->sideLengthLabel->AutoSize = true;
-			this->sideLengthLabel->Location = System::Drawing::Point(12, 345);
+			this->sideLengthLabel->Location = System::Drawing::Point(11, 276);
 			this->sideLengthLabel->Name = L"sideLengthLabel";
-			this->sideLengthLabel->Size = System::Drawing::Size(58, 20);
+			this->sideLengthLabel->Size = System::Drawing::Size(48, 16);
 			this->sideLengthLabel->TabIndex = 2;
 			this->sideLengthLabel->Text = L"Длина";
 			// 
 			// triaRadio
 			// 
 			this->triaRadio->AutoSize = true;
-			this->triaRadio->Location = System::Drawing::Point(16, 450);
+			this->triaRadio->Location = System::Drawing::Point(14, 360);
+			this->triaRadio->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->triaRadio->Name = L"triaRadio";
-			this->triaRadio->Size = System::Drawing::Size(129, 24);
+			this->triaRadio->Size = System::Drawing::Size(113, 20);
 			this->triaRadio->TabIndex = 3;
 			this->triaRadio->Text = L"Треугольник";
 			this->triaRadio->UseVisualStyleBackColor = true;
@@ -159,9 +161,10 @@ namespace CppCLRWinFormsProject {
 			// pentaRadio
 			// 
 			this->pentaRadio->AutoSize = true;
-			this->pentaRadio->Location = System::Drawing::Point(16, 480);
+			this->pentaRadio->Location = System::Drawing::Point(14, 384);
+			this->pentaRadio->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pentaRadio->Name = L"pentaRadio";
-			this->pentaRadio->Size = System::Drawing::Size(141, 24);
+			this->pentaRadio->Size = System::Drawing::Size(120, 20);
 			this->pentaRadio->TabIndex = 4;
 			this->pentaRadio->Text = L"Пятиугольник";
 			this->pentaRadio->UseVisualStyleBackColor = true;
@@ -169,9 +172,10 @@ namespace CppCLRWinFormsProject {
 			// createFigBtn
 			// 
 			this->createFigBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->createFigBtn->Location = System::Drawing::Point(16, 519);
+			this->createFigBtn->Location = System::Drawing::Point(14, 415);
+			this->createFigBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->createFigBtn->Name = L"createFigBtn";
-			this->createFigBtn->Size = System::Drawing::Size(241, 59);
+			this->createFigBtn->Size = System::Drawing::Size(214, 47);
 			this->createFigBtn->TabIndex = 6;
 			this->createFigBtn->Text = L"Создать фигуру";
 			this->createFigBtn->UseVisualStyleBackColor = true;
@@ -179,47 +183,52 @@ namespace CppCLRWinFormsProject {
 			// 
 			// xCorBox
 			// 
-			this->xCorBox->Location = System::Drawing::Point(157, 282);
+			this->xCorBox->Location = System::Drawing::Point(140, 226);
+			this->xCorBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->xCorBox->Name = L"xCorBox";
-			this->xCorBox->Size = System::Drawing::Size(100, 26);
+			this->xCorBox->Size = System::Drawing::Size(89, 22);
 			this->xCorBox->TabIndex = 7;
 			// 
 			// yCorBox
 			// 
-			this->yCorBox->Location = System::Drawing::Point(157, 314);
+			this->yCorBox->Location = System::Drawing::Point(140, 251);
+			this->yCorBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->yCorBox->Name = L"yCorBox";
-			this->yCorBox->Size = System::Drawing::Size(100, 26);
+			this->yCorBox->Size = System::Drawing::Size(89, 22);
 			this->yCorBox->TabIndex = 8;
 			// 
 			// sideLengthBox
 			// 
-			this->sideLengthBox->Location = System::Drawing::Point(157, 346);
+			this->sideLengthBox->Location = System::Drawing::Point(140, 277);
+			this->sideLengthBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->sideLengthBox->Name = L"sideLengthBox";
-			this->sideLengthBox->Size = System::Drawing::Size(100, 26);
+			this->sideLengthBox->Size = System::Drawing::Size(89, 22);
 			this->sideLengthBox->TabIndex = 9;
 			// 
 			// numFigLabel
 			// 
 			this->numFigLabel->AutoSize = true;
-			this->numFigLabel->Location = System::Drawing::Point(600, 282);
+			this->numFigLabel->Location = System::Drawing::Point(533, 226);
 			this->numFigLabel->Name = L"numFigLabel";
-			this->numFigLabel->Size = System::Drawing::Size(121, 20);
+			this->numFigLabel->Size = System::Drawing::Size(103, 16);
 			this->numFigLabel->TabIndex = 10;
 			this->numFigLabel->Text = L"Номер фигуры";
 			// 
 			// numFigBox
 			// 
-			this->numFigBox->Location = System::Drawing::Point(727, 282);
+			this->numFigBox->Location = System::Drawing::Point(646, 226);
+			this->numFigBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->numFigBox->Name = L"numFigBox";
-			this->numFigBox->Size = System::Drawing::Size(100, 26);
+			this->numFigBox->Size = System::Drawing::Size(89, 22);
 			this->numFigBox->TabIndex = 11;
 			// 
 			// hideFigBtn
 			// 
 			this->hideFigBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->hideFigBtn->Location = System::Drawing::Point(604, 326);
+			this->hideFigBtn->Location = System::Drawing::Point(537, 261);
+			this->hideFigBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->hideFigBtn->Name = L"hideFigBtn";
-			this->hideFigBtn->Size = System::Drawing::Size(223, 59);
+			this->hideFigBtn->Size = System::Drawing::Size(198, 47);
 			this->hideFigBtn->TabIndex = 12;
 			this->hideFigBtn->Text = L"Скрыть фигуру";
 			this->hideFigBtn->UseVisualStyleBackColor = true;
@@ -228,9 +237,10 @@ namespace CppCLRWinFormsProject {
 			// showFigBtn
 			// 
 			this->showFigBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->showFigBtn->Location = System::Drawing::Point(604, 389);
+			this->showFigBtn->Location = System::Drawing::Point(537, 311);
+			this->showFigBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->showFigBtn->Name = L"showFigBtn";
-			this->showFigBtn->Size = System::Drawing::Size(223, 59);
+			this->showFigBtn->Size = System::Drawing::Size(198, 47);
 			this->showFigBtn->TabIndex = 13;
 			this->showFigBtn->Text = L"Показать фигуру";
 			this->showFigBtn->UseVisualStyleBackColor = true;
@@ -239,9 +249,10 @@ namespace CppCLRWinFormsProject {
 			// moveFigBtn
 			// 
 			this->moveFigBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->moveFigBtn->Location = System::Drawing::Point(604, 454);
+			this->moveFigBtn->Location = System::Drawing::Point(537, 363);
+			this->moveFigBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->moveFigBtn->Name = L"moveFigBtn";
-			this->moveFigBtn->Size = System::Drawing::Size(223, 59);
+			this->moveFigBtn->Size = System::Drawing::Size(198, 47);
 			this->moveFigBtn->TabIndex = 14;
 			this->moveFigBtn->Text = L"Переместить фигуру";
 			this->moveFigBtn->UseVisualStyleBackColor = true;
@@ -250,9 +261,10 @@ namespace CppCLRWinFormsProject {
 			// showAllBtn
 			// 
 			this->showAllBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->showAllBtn->Location = System::Drawing::Point(604, 519);
+			this->showAllBtn->Location = System::Drawing::Point(537, 415);
+			this->showAllBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->showAllBtn->Name = L"showAllBtn";
-			this->showAllBtn->Size = System::Drawing::Size(223, 59);
+			this->showAllBtn->Size = System::Drawing::Size(198, 47);
 			this->showAllBtn->TabIndex = 15;
 			this->showAllBtn->Text = L"Показать все фигуры";
 			this->showAllBtn->UseVisualStyleBackColor = true;
@@ -261,19 +273,21 @@ namespace CppCLRWinFormsProject {
 			// messageBox
 			// 
 			this->messageBox->Enabled = false;
-			this->messageBox->Location = System::Drawing::Point(16, 12);
+			this->messageBox->Location = System::Drawing::Point(14, 10);
+			this->messageBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->messageBox->Name = L"messageBox";
 			this->messageBox->ReadOnly = true;
-			this->messageBox->Size = System::Drawing::Size(430, 26);
+			this->messageBox->Size = System::Drawing::Size(383, 22);
 			this->messageBox->TabIndex = 16;
 			this->messageBox->Visible = false;
 			// 
 			// outColorBtn
 			// 
 			this->outColorBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->outColorBtn->Location = System::Drawing::Point(263, 522);
+			this->outColorBtn->Location = System::Drawing::Point(234, 418);
+			this->outColorBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->outColorBtn->Name = L"outColorBtn";
-			this->outColorBtn->Size = System::Drawing::Size(93, 53);
+			this->outColorBtn->Size = System::Drawing::Size(83, 42);
 			this->outColorBtn->TabIndex = 17;
 			this->outColorBtn->Text = L"Цвет контура";
 			this->outColorBtn->UseVisualStyleBackColor = true;
@@ -282,9 +296,10 @@ namespace CppCLRWinFormsProject {
 			// backColorBtn
 			// 
 			this->backColorBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->backColorBtn->Location = System::Drawing::Point(362, 522);
+			this->backColorBtn->Location = System::Drawing::Point(322, 418);
+			this->backColorBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->backColorBtn->Name = L"backColorBtn";
-			this->backColorBtn->Size = System::Drawing::Size(93, 53);
+			this->backColorBtn->Size = System::Drawing::Size(83, 42);
 			this->backColorBtn->TabIndex = 18;
 			this->backColorBtn->Text = L"Цвет фона";
 			this->backColorBtn->UseVisualStyleBackColor = true;
@@ -293,9 +308,10 @@ namespace CppCLRWinFormsProject {
 			// octaRadio
 			// 
 			this->octaRadio->AutoSize = true;
-			this->octaRadio->Location = System::Drawing::Point(16, 420);
+			this->octaRadio->Location = System::Drawing::Point(14, 336);
+			this->octaRadio->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->octaRadio->Name = L"octaRadio";
-			this->octaRadio->Size = System::Drawing::Size(159, 24);
+			this->octaRadio->Size = System::Drawing::Size(136, 20);
 			this->octaRadio->TabIndex = 19;
 			this->octaRadio->Text = L"Восьмиугольник";
 			this->octaRadio->UseVisualStyleBackColor = true;
@@ -304,9 +320,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->circleRadio->AutoSize = true;
 			this->circleRadio->Checked = true;
-			this->circleRadio->Location = System::Drawing::Point(16, 389);
+			this->circleRadio->Location = System::Drawing::Point(14, 311);
+			this->circleRadio->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->circleRadio->Name = L"circleRadio";
-			this->circleRadio->Size = System::Drawing::Size(125, 24);
+			this->circleRadio->Size = System::Drawing::Size(107, 20);
 			this->circleRadio->TabIndex = 20;
 			this->circleRadio->TabStop = true;
 			this->circleRadio->Text = L"Окружность";
@@ -314,10 +331,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Bisque;
-			this->ClientSize = System::Drawing::Size(839, 600);
+			this->ClientSize = System::Drawing::Size(746, 480);
 			this->Controls->Add(this->circleRadio);
 			this->Controls->Add(this->octaRadio);
 			this->Controls->Add(this->backColorBtn);
@@ -338,8 +355,10 @@ namespace CppCLRWinFormsProject {
 			this->Controls->Add(this->sideLengthLabel);
 			this->Controls->Add(this->yCorLabel);
 			this->Controls->Add(this->xCorLabel);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Form1";
 			this->Text = L"23VP1_24";
+			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -350,7 +369,15 @@ namespace CppCLRWinFormsProject {
 		Graphics^ h = CreateGraphics();
 		//h->Clear(BackColor);
 		try {
-
+			int xcor = System::Convert::ToInt32(xCorBox->Text);
+			int ycor = System::Convert::ToInt32(yCorBox->Text);
+			int side = System::Convert::ToInt32(sideLengthBox->Text);
+			int heightScreen = this->Height;
+			int widthScreen = this->Width;
+			if (circleRadio->Checked) {
+				Circle* circle = new Circle(xcor, ycor, side, widthScreen, heightScreen);
+				circle->show(h, outColorBtn->BackColor, backColorBtn->BackColor);
+			}
 		}
 		catch (Figure::Exception ex) {
 			messageBox->Visible = true;
@@ -448,5 +475,7 @@ namespace CppCLRWinFormsProject {
 		backColorDialog->ShowDialog();
 		backColorBtn->BackColor = backColorDialog->Color;
 	}
+private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
