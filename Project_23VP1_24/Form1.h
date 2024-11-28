@@ -1,6 +1,7 @@
 #pragma once
 #include "Figure.h"
 #include "FigArr.h"
+#include "Octagon.h"
 //#include "myStorage.h"
 FigureArr farr;
 namespace CppCLRWinFormsProject {
@@ -350,7 +351,15 @@ namespace CppCLRWinFormsProject {
 		Graphics^ h = CreateGraphics();
 		//h->Clear(BackColor);
 		try {
-
+			int xcor = System::Convert::ToInt32(xCorBox->Text);
+			int ycor = System::Convert::ToInt32(yCorBox->Text);
+			int side = System::Convert::ToInt32(sideLengthBox->Text);
+			int heightScreen = this->Height;
+			int widthScreen = this->Width;
+			if (octaRadio->Checked) {
+				Octagon* octa = new Octagon(xcor, ycor, side, widthScreen, heightScreen);
+				octa->show(h, outColorBtn->BackColor, backColorBtn->BackColor);
+			}
 		}
 		catch (Figure::Exception ex) {
 			messageBox->Visible = true;
@@ -359,9 +368,9 @@ namespace CppCLRWinFormsProject {
 		}
 		catch (...) {
 			messageBox->Visible = true;
-			messageBox->Text = L"Не все поля заполнены!";
+			messageBox->Text = L"Некорректные данные!";
 		}
-	}	
+	}
 		   
 		
 	private: System::Void hideFigBtn_Click(System::Object^ sender, System::EventArgs^ e) {
