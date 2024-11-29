@@ -1,8 +1,8 @@
 #pragma once
 #include "Figure.h"
 #include "FigArr.h"
-//#include "myStorage.h"
 FigureArr farr;
+//Лабораторная работа №6. Сазонов/Зимин/Бояринова/Бычкова
 namespace CppCLRWinFormsProject {
 
 	using namespace System;
@@ -348,7 +348,6 @@ namespace CppCLRWinFormsProject {
 	private: System::Void createFigBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 		messageBox->Visible = false;
 		Graphics^ h = CreateGraphics();
-		//h->Clear(BackColor);
 		try {
 
 		}
