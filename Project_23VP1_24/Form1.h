@@ -1,5 +1,6 @@
 #pragma once
 #include "Figure.h"
+#include "Circle.h"
 #include "FigArr.h"
 #include "Triangle.h"
 #include "Pentagone.h"
@@ -364,7 +365,6 @@ namespace CppCLRWinFormsProject {
 			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Form1";
 			this->Text = L"23VP1_24";
-			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -386,6 +386,10 @@ namespace CppCLRWinFormsProject {
 			else if (pentaRadio->Checked) {
 				Pentagone* penta = new Pentagone(xcor, ycor, side, widthScreen, heightScreen);
 				penta->show(h, outColorBtn->BackColor, backColorBtn->BackColor);
+			} 
+			else if (circleRadio->Checked) {
+				Circle* circle = new Circle(xcor, ycor, side, widthScreen, heightScreen);
+				circle->show(h, outColorBtn->BackColor, backColorBtn->BackColor);
 			}
 		}
 		catch (Figure::Exception ex) {
@@ -484,7 +488,5 @@ namespace CppCLRWinFormsProject {
 		backColorDialog->ShowDialog();
 		backColorBtn->BackColor = backColorDialog->Color;
 	}
-private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }
