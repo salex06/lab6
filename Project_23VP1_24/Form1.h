@@ -2,6 +2,7 @@
 #include "Figure.h"
 #include "Circle.h"
 #include "FigArr.h"
+#include "Octagon.h"
 #include "Triangle.h"
 #include "Pentagone.h"
 //#include "myStorage.h"
@@ -391,6 +392,10 @@ namespace CppCLRWinFormsProject {
 				Circle* circle = new Circle(xcor, ycor, side, widthScreen, heightScreen);
 				circle->show(h, outColorBtn->BackColor, backColorBtn->BackColor);
 			}
+			else if (octaRadio->Checked) {
+				Octagon* octa = new Octagon(xcor, ycor, side, widthScreen, heightScreen);
+				octa->show(h, outColorBtn->BackColor, backColorBtn->BackColor);
+			}
 		}
 		catch (Figure::Exception ex) {
 			messageBox->Visible = true;
@@ -399,9 +404,9 @@ namespace CppCLRWinFormsProject {
 		}
 		catch (...) {
 			messageBox->Visible = true;
-			messageBox->Text = L"Не все поля заполнены!";
+			messageBox->Text = L"Некорректные данные!";
 		}
-	}	
+	}
 		   
 		
 	private: System::Void hideFigBtn_Click(System::Object^ sender, System::EventArgs^ e) {
